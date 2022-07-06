@@ -1,0 +1,53 @@
+<div class="fo mb-5 " >
+<input
+max="11"
+min="4"
+required
+
+ type="number"
+class="my-5"
+[formControl]="control"
+>
+
+
+
+<input
+type="number"
+class="my-5"
+[(ngModel)]="model"
+>
+
+</div>
+
+<div class="fo">
+<div class="form-floating">
+  <textarea
+      class="form-control"
+      value="{{ control | json }}"
+      placeholder="Leave a comment here"
+      id="floatingTextarea2"
+      style="height: 70vh; width: 500px"
+   >
+  </textarea>
+
+</div>
+
+<div class="form-floating">
+  <textarea
+      class="form-control"
+      value="{{ model }}"
+      placeholder="Leave a comment here"
+      id="floatingTextarea2"
+      style="height: 70vh; width: 500px"
+   >
+  </textarea>
+
+</div>
+
+
+
+</div>
+
+
+
+

@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
-
+import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -9,8 +9,10 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
+  control = new FormControl();
+  model = 7;
 
-  addform!: FormGroup;
+  // addform!: FormGroup;
   // types = ' where do i put this';
   // Comments = '';
 
@@ -30,15 +32,12 @@ export class FormComponent implements OnInit {
   //   };
   //    return Vall.setValue(useData);
   // }
-  constructor( private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.addform = this.fb.group({
-
-      formName:['', Validators.email] ,
-      formDescription:['1', Validators.required]
-
-
-    });
+    // this.addform = this.fb.group({
+    //   formName:['', Validators.email] ,
+    //   formDescription:['1', Validators.required]
+    // });
   }
 }
