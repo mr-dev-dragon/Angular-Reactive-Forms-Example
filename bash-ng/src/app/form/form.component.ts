@@ -19,8 +19,20 @@ export class FormComponent implements OnInit {
     console.log(form);
     return form;
   }
-
+  reset(Valy: NgForm) {
+    return Valy.reset();
+  }
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+
+  settt(Vall: NgForm) {
+    let useData = {
+      email: 'aouladoumarahmed100@gmail.com',
+      password: 'sdf',
+      types: 4,
+      Comments: 'hi there',
+    };
+     return Vall.setValue(useData);
+  }
 }

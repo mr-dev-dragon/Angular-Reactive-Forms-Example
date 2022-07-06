@@ -12,7 +12,6 @@
                 </div>
                  <label for="select" class="form-label" > where should i put this </label>
                 <select [(ngModel)]="types" name="types" id='select'   class="form-select  mb-3" aria-label="Default select example" required>
-                  <option selected>Open this select menu</option>
                   <option value="1">on the lest</option>
                   <option value="2"> to do </option>
                   <option value="3">on progress</option>
@@ -22,9 +21,10 @@
                   <textarea  [(ngModel)]="Comments" name="Comments"   class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required></textarea>
                   <label for="floatingTextarea2">Comments</label>
                 </div>
-            <div class="form-floating mb-3">
-                <button type="submit" [disabled]="!form.value" class="btn btn-primary">Submit</button>
-          </div>
+                 <button type="button" (click)="reset(form)" class="btn   mb-3 btn-link">reset</button> <br>
+                <button type="submit" [disabled]="!form.value" class="btn mb-3 btn-primary">Submit</button><br>
+                <button type="button" (click)="settt(form)" class="btn   mb-3 btn-link">set</button>
+
             </form>
       </div>
 </section>
