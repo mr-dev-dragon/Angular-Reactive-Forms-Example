@@ -1,7 +1,6 @@
-<section [ngClass]="{'cante': true}">
+<!-- <section [ngClass]="{'cante': true}">
         <div class="position-absolute mt-5 " [ngClass]="{'canter': true}">
             <form #form="ngForm" (ngSubmit)="loginForm(form);">
-
                  <label for="select" class="form-label" > where should i put this </label>
                 <select [(ngModel)]="types" name="types" id='select'   class="form-select  mb-3" aria-label="Default select example" required>
                   <option value="1">on the lest</option>
@@ -16,7 +15,19 @@
                  <button type="button" (click)="reset(form)" class="btn   mb-3 btn-link">reset</button> <br>
                 <button type="submit" [disabled]="!form.value" class="btn mb-3 btn-primary">Submit</button><br>
                 <button type="button" (click)="settt(form)" class="btn   mb-3 btn-link">set</button>
-
             </form>
       </div>
-</section>
+</section> -->
+
+
+
+
+<form [formGroup]="addform" #forma >
+
+    <input type="text" formControlName="addname" class="   mb-3 ">
+       <input type="text" formControlName="addetype" class="   mb-3 ">
+
+    <textarea formControlName="adddescription"  class="   mb-3 "></textarea>
+    <button (click)="addADDtype();" [disabled]="!addform.valid">add a new one</button>
+
+</form>

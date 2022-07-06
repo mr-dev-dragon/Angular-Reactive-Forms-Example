@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 
 @Component({
@@ -10,27 +10,35 @@ import { NgForm } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  types = ' where do i put this';
-  Comments = '';
+  addform!: FormGroup;
+  // types = ' where do i put this';
+  // Comments = '';
 
-  loginForm(Val: NgForm) {
-    const form = Val.value;
-    console.log(form);
-    return form;
-  }
-  reset(Valy: NgForm) {
-    return Valy.reset();
-  }
-  constructor() {}
+  // loginForm(Val: NgForm) {
+  //   const form = Val.value;
+  //   console.log(form);
+  //   return form;
+  // }
+  // reset(Valy: NgForm) {
+  //   return Valy.reset();
+  // }
+  // settt(Vall: NgForm) {
+  //   let useData = {
 
-  ngOnInit(): void { }
+  //     types: 4,
+  //     Comments: 'hi there',
+  //   };
+  //    return Vall.setValue(useData);
+  // }
+  constructor( private fb: FormBuilder) {}
 
-  settt(Vall: NgForm) {
-    let useData = {
+  ngOnInit(): void {
+    this.addform = this.fb.group({
 
-      types: 4,
-      Comments: 'hi there',
-    };
-     return Vall.setValue(useData);
+      formName:['', Validators.email] ,
+      formDescription:['1', Validators.required]
+
+
+    });
   }
 }
