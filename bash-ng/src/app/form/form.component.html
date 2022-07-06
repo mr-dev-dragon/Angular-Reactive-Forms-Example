@@ -1,6 +1,6 @@
 
-
-<form>
+  <div class="position-absolute mt-5 " [ngClass]="{'canter': true}">
+<form #form="ngForm" (ngSubmit)="loginForm(form);">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input [(ngModel)]="email" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -8,11 +8,28 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <input  [(ngModel)]="password" name="password" type="password" class="form-control" id="exampleInputPassword1">
   </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
+
+<select [(ngModel)]="types" name="types"   class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">on the lest</option>
+  <option value="2"> to do </option>
+  <option value="3">on progress</option>
+  <option value="4">done it</option>
+</select>
+<div class="form-floating">
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <label for="floatingTextarea2">Comments</label>
+</div>
+
+
+
+
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<P>{{ password}}</P>
+<P> {{ email}}</P>
+<P> {{ form }}</P>
+</div>
