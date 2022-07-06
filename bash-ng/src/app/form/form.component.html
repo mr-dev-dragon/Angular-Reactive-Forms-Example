@@ -1,38 +1,30 @@
-
-  <div class="position-absolute mt-5 " [ngClass]="{'canter': true}">
-<form #form="ngForm" (ngSubmit)="loginForm(form);">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input [(ngModel)]="email" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input  [(ngModel)]="password" name="password" type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-
-<select [(ngModel)]="types" name="types"   class="form-select  mb-3" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">on the lest</option>
-  <option value="2"> to do </option>
-  <option value="3">on progress</option>
-  <option value="4">done it</option>
-</select>
-<div class="form-floating mb-3">
-  <textarea  [(ngModel)]="Comments" name="Comments"   class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-  <label for="floatingTextarea2">Comments</label>
-</div>
-
-
-
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-<P>{{ password}}</P>
-<P> {{ email}}</P>
-<P> {{ form }}</P>
-<P> {{Comments }}</P>
-<P> {{types}}</P>
-
-</div>
+<section [ngClass]="{'cante': true}">
+        <div class="position-absolute mt-5 " [ngClass]="{'canter': true}">
+            <form #form="ngForm" (ngSubmit)="loginForm(form);">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input [(ngModel)]="email" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  required>
+                  <div id="emailHelp" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input  [(ngModel)]="password" name="password" type="password" class="form-control" id="exampleInputPassword1"required>
+                </div>
+                 <label for="select" class="form-label" > where should i put this </label>
+                <select [(ngModel)]="types" name="types" id='select'   class="form-select  mb-3" aria-label="Default select example" required>
+                  <option selected>Open this select menu</option>
+                  <option value="1">on the lest</option>
+                  <option value="2"> to do </option>
+                  <option value="3">on progress</option>
+                  <option value="4">done it</option>
+                </select>
+                <div class="form-floating mb-3">
+                  <textarea  [(ngModel)]="Comments" name="Comments"   class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required></textarea>
+                  <label for="floatingTextarea2">Comments</label>
+                </div>
+            <div class="form-floating mb-3">
+                <button type="submit" [disabled]="!form.value" class="btn btn-primary">Submit</button>
+          </div>
+            </form>
+      </div>
+</section>
