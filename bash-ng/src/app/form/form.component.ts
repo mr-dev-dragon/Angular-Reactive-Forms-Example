@@ -12,6 +12,7 @@ export class FormComponent implements OnInit {
   email = '';
   password = '';
   types = ' where do i put this';
+  Comments = '';
 
   loginForm(Val: NgForm) {
     const form = Val.value;

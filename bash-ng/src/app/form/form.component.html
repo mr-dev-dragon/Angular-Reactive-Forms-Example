@@ -11,15 +11,15 @@
     <input  [(ngModel)]="password" name="password" type="password" class="form-control" id="exampleInputPassword1">
   </div>
 
-<select [(ngModel)]="types" name="types"   class="form-select" aria-label="Default select example">
+<select [(ngModel)]="types" name="types"   class="form-select  mb-3" aria-label="Default select example">
   <option selected>Open this select menu</option>
   <option value="1">on the lest</option>
   <option value="2"> to do </option>
   <option value="3">on progress</option>
   <option value="4">done it</option>
 </select>
-<div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+<div class="form-floating mb-3">
+  <textarea  [(ngModel)]="Comments" name="Comments"   class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
   <label for="floatingTextarea2">Comments</label>
 </div>
 
@@ -32,4 +32,7 @@
 <P>{{ password}}</P>
 <P> {{ email}}</P>
 <P> {{ form }}</P>
+<P> {{Comments }}</P>
+<P> {{types}}</P>
+
 </div>
