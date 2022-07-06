@@ -9,8 +9,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-  email = '';
-  password = '';
+
   types = ' where do i put this';
   Comments = '';
 
@@ -28,8 +27,7 @@ export class FormComponent implements OnInit {
 
   settt(Vall: NgForm) {
     let useData = {
-      email: 'aouladoumarahmed100@gmail.com',
-      password: 'sdf',
+
       types: 4,
       Comments: 'hi there',
     };
