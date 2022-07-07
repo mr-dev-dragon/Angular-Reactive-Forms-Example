@@ -1,53 +1,46 @@
-<div class="fo mb-5 " >
-<input
-max="11"
-min="4"
-required
-
- type="number"
-class="my-5"
-[formControl]="control"
->
+<form [formGroup]="porfileForm" (ngSubmit)="onSubmit()" >
 
 
+  <div class="fo mb-5">
+            <input
 
-<input
-type="number"
-class="my-5"
-[(ngModel)]="model"
->
+              type="text"
+              class="my-5"
+              formControlName="controltoww"
+            />
 
-</div>
-
-<div class="fo">
-<div class="form-floating">
-  <textarea
-      class="form-control"
-      value="{{ control | json }}"
-      placeholder="Leave a comment here"
-      id="floatingTextarea2"
-      style="height: 70vh; width: 500px"
-   >
-  </textarea>
-
-</div>
-
-<div class="form-floating">
-  <textarea
-      class="form-control"
-      value="{{ model }}"
-      placeholder="Leave a comment here"
-      id="floatingTextarea2"
-      style="height: 70vh; width: 500px"
-   >
-  </textarea>
-
-</div>
+            <input type="number" class="my-5" formControlName='modeltow'/>
+  </div>
 
 
-
-</div>
+<button type="submit" >submit </button>
 
 
 
 
+  <div class="fo">
+    <div class="form-floating">
+      <textarea
+        class="form-control"
+        value="{{ a | json }}"
+        placeholder="Leave a comment here"
+        id="floatingTextarea2"
+        style="height: 70vh; width: 500px"
+      >
+      </textarea>
+    </div>
+
+    <div class="form-floating">
+      <textarea
+        class="form-control"
+        value="{{ controltow | json  }}"
+        placeholder="Leave a comment here"
+        id="floatingTextarea2"
+        style="height: 70vh; width: 500px"
+      >
+      </textarea>
+    </div>
+  </div>
+
+
+</form>
