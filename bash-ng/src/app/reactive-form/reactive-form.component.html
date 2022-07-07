@@ -229,6 +229,11 @@ dfgsdf
             </div>
           </div>
         </div>
+
+
+
+
+
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button  (click)="status5=!status5" [ngClass]="status5 ? '' :'collapsed'" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -236,13 +241,18 @@ dfgsdf
             Address
             </button>
           </h2>
-          <div id="collapseTwo" (click)="status5=!status5" [ngClass]="status6 ? '' :'collapsed'" class="accordion-collapse collapse " aria-labelledby="headingTwo"
+          <div id="collapseTwo" [ngClass]="status5 ? '' :'show'" class="accordion-collapse collapse " aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
 dsgsdfg
             </div>
           </div>
         </div>
+
+
+
+
+
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button  (click)="status6=!status6" [ngClass]="status6 ? '' :'collapsed'" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
