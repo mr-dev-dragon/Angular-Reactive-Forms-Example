@@ -1,3 +1,4 @@
+import { group } from '@angular/animations';
 import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,6 +10,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { NgModel } from '@angular/forms';
+import { VirtualTimeScheduler } from 'rxjs';
 
 @Component({
   selector: 'app-reactive-form',
@@ -16,25 +18,36 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./reactive-form.component.scss'],
 })
 export class ReactiveFormComponent implements OnInit {
-  control = new FormControl();
-  controll = new FormControl();
-  model = 7;
-  controltow = new FormControl();
+  porfileForm: FormGroup;
 
-  name = new FormControl();
-  a!: any;
-  porfileForm = new FormGroup({
-    controltoww: new FormControl(),
-    modeltow: new FormControl(),
-  });
-
-  constructor() {
-    this.name.valueChanges.subscribe((changes) => (changes = this.controltow));
+  constructor(private fb: FormBuilder) {
+    this.porfileForm = this.fb.group({
+      First_name: '',
+      person: this.fb.group({
+        Last_name: '',
+      }),
+      user: this.fb.group({
+        Email: '',
+        Password: '',
+      }),
+      address: this.fb.group({
+        Address: '',
+        Address_2: '',
+        City: '',
+        State: '',
+        Zip: '',
+      }),
+      Check_me_out: '',
+    });
   }
 
   ngOnInit(): void {}
-  onSubmit() {
-    this.a = this.porfileForm;
-    return this.a; 
+
+  get First_name() {
+    return this.porfileForm.get('First_name');
+  }
+
+  onSubmit(): void {
+    console.log(this.porfileForm);
   }
 }
