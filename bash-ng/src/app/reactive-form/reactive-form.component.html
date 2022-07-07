@@ -7,22 +7,11 @@
 
 <div class="container  bt-5  mt-6 ">
   <div class="row">
-    <div class="col">
-      <div class="alert alert-danger" role="alert">
-        the form is invalid
-      </div>
-
-      <div class="alert alert-success" role="alert">
-        the form is all valid
-      </div>
-      <div class="alert alert-warning" role="alert">
-        look at the input(???)
-      </div>
-    </div>
 
 
-    <div class="col-6 shadow p-3 mb-5 mx-5 bg-body rounded">
 
+    <div class="col-6 ">
+<div class="shadow p-3 mb-5 mx-5 bg-body rounded">
       <form class="row g-3" [formGroup]="porfileForm" (ngSubmit)="onSubmit()">
 
 
@@ -46,7 +35,7 @@
 
         <div formGroupName="user" class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
-          <input formControlName="Email" type="email" class="form-control" id="inputEmail4">
+          <input formControlName="Email" type="email" class="form-control is-invalid" id="inputEmail4">
         </div>
         <div formGroupName="user" class="col-md-6">
           <label for="inputPassword4" class="form-label">Password</label>
@@ -100,6 +89,7 @@
         </div>
 
       </form>
+      </div>
     </div>
 
 
@@ -311,7 +301,18 @@ dsfgsdf
       </div>
 
     </div>
-  </div>
+    <div class="col">
+      <div class="alert alert-danger" role="alert">
+        the form is invalid
+      </div>
 
+      <!-- <div class="alert alert-success" role="alert">
+        the form is all valid
+      </div>
+      <div class="alert alert-warning" role="alert">
+        look at the input(???)
+      </div> -->
+    </div>
+  </div>
 
 </div>
