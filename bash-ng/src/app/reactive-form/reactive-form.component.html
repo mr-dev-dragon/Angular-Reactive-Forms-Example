@@ -17,8 +17,8 @@
 
 
                   <div formGroupName="person" class="col-md-6">
-                    <label *ngIf="First_name?.isStopped" for="inputEmail413" class="form-label  is-invalid ">First name</label>
-                    <input  type="text" class="form-control" placeholder="First name" aria-label="First name" id="inputEmail413">
+                    <label *ngIf="First_name?.markAsPristine" for="inputEmail413" class="form-label  is-invalid ">First name</label>
+                    <input formControlName="First_name"  type="text" class="form-control" placeholder="First name" aria-label="First name" id="inputEmail413">
                   </div>
                   <div formGroupName="person"  class="col-md-6">
                   <label for="inputEmail412" class="form-label">Last name</label>
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Sign in</button>
+                  <button [disabled]="!porfileForm.value" type="submit" class="btn btn-primary">Sign in</button>
                 </div>
 
           </form>
