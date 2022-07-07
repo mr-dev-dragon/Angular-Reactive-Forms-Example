@@ -8,10 +8,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { NgClass } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, ReactiveFormComponent, NavbarComponent],
+  declarations: [AppComponent, FormComponent, ReactiveFormComponent, NavbarComponent, FooterComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
