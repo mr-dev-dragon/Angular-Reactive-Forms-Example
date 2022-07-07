@@ -127,140 +127,175 @@
       <div class="accordion shadow p-3 mb-5 bg-body rounded ml-5" id="accordionExample" >
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button
-             (click)="status=!status"
-
-
-              [ngClass]="status ? 'show' : 'accordion-button'"
-            class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="true"
-               aria-controls="collapseOne"
+             (click)="status1=!status1"
+             [ngClass]="status1 ? '' :'collapsed'"
+             type="button"
+             class="accordion-button  "
+             data-bs-toggle="collapse"
+             data-bs-target="#collapseOne"
+             aria-expanded="true"
+             aria-controls="collapseOne"
                >
                 First name
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+          <div id="collapseOne"  [ngClass]="status1 ? 'show' :''" class="accordion-collapse  collapse" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi pariatur deleniti debitis corrupti distinctio quia qui laboriosam cumque maiores vero quae animi, laudantium suscipit possimus consectetur nemo dicta neque quibusdam in soluta dignissimos esse aspernatur ut. Quibusdam inventore minus, impedit id repellat accusamus necessitatibus ex odio molestias dignissimos. Aut, magni.
             </div>
           </div>
         </div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button  (click)="status2=!status2" [ngClass]="status2 ? '' :'collapsed'" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Last name
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo"
+          <div id="collapseTwo" [ngClass]="status2 ? 'show' :''" class="accordion-collapse collapse " aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-
+        fgsdfgdsfg
             </div>
           </div>
         </div>
 
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button  (click)="status3=!status3" [ngClass]="status3 ? '' :'collapsed'" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Email
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo"
+          <div id="collapseTwo" [ngClass]="status3 ? 'show' :''" class="accordion-collapse collapse " aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-
+dfsgsdfgsdf
             </div>
           </div>
         </div>
 
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button  (click)="status4=!status4" [ngClass]="status4 ? '' :'collapsed'" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             Password
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo"
+          <div id="collapseTwo"  [ngClass]="status4 ? 'show' :''"class="accordion-collapse collapse " aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-
+dfgsdf
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button  (click)="status5=!status5" [ngClass]="status5 ? '' :'collapsed'" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             Address
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo"
+          <div id="collapseTwo" (click)="status5=!status5" [ngClass]="status6 ? '' :'collapsed'" class="accordion-collapse collapse " aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-
+dsgsdfg
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button  (click)="status6=!status6" [ngClass]="status6 ? '' :'collapsed'" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Address 2
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo"
+          <div id="collapseTwo" [ngClass]="status6? 'show' :''" class="accordion-collapse collapse " aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-
+sdfgsd
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button  (click)="status7=!status7" [ngClass]="status7 ? '' :'collapsed'" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 City
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo"
+          <div id="collapseTwo" [ngClass]="status7 ? 'show' :''" class="accordion-collapse collapse " aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-
+sdfgsdfg
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button  (click)="status8=!status8" [ngClass]="status8 ? '' :'collapsed'" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               State
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo"
+          <div id="collapseTwo" [ngClass]="status8 ? 'show' :''" class="accordion-collapse collapse " aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
+              dfsgsdfg
       </div>
       </div>
       </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+      <button  (click)="status9=!status9" [ngClass]="status9 ? '' :'collapsed'" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
         aria-expanded="false" aria-controls="collapseTwo">
       Zip
       </button>
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo"
+    <div id="collapseTwo" [ngClass]="status9 ? 'show' :''" class="accordion-collapse collapse " aria-labelledby="headingTwo"
       data-bs-parent="#accordionExample">
       <div class="accordion-body">
-
+dsfgsdf
       </div>
     </div>
   </div>

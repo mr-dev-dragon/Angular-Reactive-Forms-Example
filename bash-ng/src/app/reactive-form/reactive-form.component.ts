@@ -19,7 +19,16 @@ import { VirtualTimeScheduler } from 'rxjs';
 })
 export class ReactiveFormComponent implements OnInit {
   porfileForm: FormGroup;
-  status: boolean = false;
+
+  status1: boolean = false;
+  status2: boolean = false;
+  status3: boolean = false;
+  status4: boolean = false;
+  status5: boolean = false;
+  status6: boolean = false;
+  status7: boolean = false;
+  status8: boolean = false;
+  status9: boolean = false;
 
   constructor(private fb: FormBuilder) {
     this.porfileForm = this.fb.group({
@@ -58,7 +67,6 @@ export class ReactiveFormComponent implements OnInit {
   onSubmit(): void {
     console.log(this.porfileForm);
   }
-
 }
 
 
