@@ -12,12 +12,13 @@
     </div>
     <div class="col-6 shadow p-3 mb-5 bg-body rounded">
 
-    <form class="row g-3" [formGroup]="porfileForm" (ngSubmit)="onSubmit()">
+    <form class="row g-3" [formGroup]="porfileForm" (ngSubmit)="onSubmit()" >
 
 
 
-                  <div formGroupName="person" class="col-md-6">
-                    <label *ngIf="First_name?.markAsPristine" for="inputEmail413" class="form-label  is-invalid ">First name</label>
+                  <div class="col-md-6">
+                    <span *ngIf="First_name.invalid && (First_name.dirty ||First_name.touched)" class="alert mb-5">blabla</span>
+                    <label  for="inputEmail413" class="form-label  is-invalid ">First name</label>
                     <input formControlName="First_name"  type="text" class="form-control" placeholder="First name" aria-label="First name" id="inputEmail413">
                   </div>
                   <div formGroupName="person"  class="col-md-6">

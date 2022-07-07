@@ -22,10 +22,16 @@ export class ReactiveFormComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.porfileForm = this.fb.group({
-
       person: this.fb.group({
-        First_name: ['',[ Validators.required, Validators.minLength(4) , Validators.maxLength(5)]],
-        Last_name: ''
+        First_name: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(4),
+            Validators.maxLength(10),
+          ],
+        ],
+        Last_name: '',
       }),
       user: this.fb.group({
         Email: '',
@@ -42,13 +48,19 @@ export class ReactiveFormComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
   get First_name() {
-    return this.porfileForm.get('person.First_name');
+    return this.porfileForm.get('First_name');
   }
 
   onSubmit(): void {
     console.log(this.porfileForm);
   }
+
+
 }
+
+
