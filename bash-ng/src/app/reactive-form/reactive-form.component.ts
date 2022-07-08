@@ -30,43 +30,53 @@ export class ReactiveFormComponent implements OnInit {
   status8: boolean = false;
   status9: boolean = false;
 
+  // public from: FormGroup = new FormGroup({
+  //   First_name: new FormControl(
+  //     '',
+  //     [Validators.required, Validators.maxLength(20)],
+  //     []
+  //   ),
+
+  //   Last_name: new FormControl('', Validators.required, []),
+  // });
+
+  public addForm: FormGroup;
+
   constructor(private fb: FormBuilder) {
-    this.porfileForm = this.fb.group({
-      person: this.fb.group({
-        First_name: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(4),
-            Validators.maxLength(10),
-          ],
-        ],
-        Last_name: '',
-      }),
-      user: this.fb.group({
-        Email: '',
-        Password: '',
-      }),
-      address: this.fb.group({
-        Address: '',
-        Address_2: '',
-        City: '',
-        State: '',
-        Zip: '',
-      }),
-      Check_me_out: '',
+    this.addForm = this.fb.group({
+      First_name: ['',
+        [Validators.required, Validators.maxLength(10)], []],
+      Last_name: ['',
+        [Validators.required, Validators.maxLength(10)], []],
+      Email: ['',
+        [Validators.required, Validators.maxLength(10)], []],
+      Password: ['',
+        [Validators.required, Validators.maxLength(10)], []],
+      Address: ['',
+        [Validators.required, Validators.maxLength(10)], []],
+      Address_2: ['',
+        [Validators.required, Validators.maxLength(10)], []],
+      City: ['',
+        [Validators.required, Validators.maxLength(10)], []],
+      State: ['',
+        [Validators.required, Validators.maxLength(10)], []],
+      Zip: ['',
+        [Validators.required, Validators.maxLength(10)], []],
+      Check_me_out: ['',
+        [Validators.required, Validators.maxLength(10)], []],
     });
+    this.addForm.valueChanges.subscribe(console.log);
   }
 
   ngOnInit(): void {}
 
-  get First_name() {
-    return this.porfileForm.get('First_name');
-  }
+  // get First_name() {
+  //   return this.porfileForm.get('First_name');
+  // }
 
-  onSubmit(): void {
-    console.log(this.porfileForm);
-  }
+  // onSubmit(): void {
+  //   console.log(this.porfileForm);
+  // }
 }
 
 
