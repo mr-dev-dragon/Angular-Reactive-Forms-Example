@@ -18,7 +18,7 @@ import { VirtualTimeScheduler } from 'rxjs';
   styleUrls: ['./reactive-form.component.scss'],
 })
 export class ReactiveFormComponent implements OnInit {
-  porfileForm: FormGroup;
+
 
   status1: boolean = false;
   status2: boolean = false;
