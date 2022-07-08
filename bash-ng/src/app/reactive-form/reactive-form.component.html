@@ -3,9 +3,9 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-6">
-      <div class=" p-3 mb-5 mx-5 bg-body rounded">
-        <form class="row g-3" [formGroup]="addForm" >
-<!-- <div class="col-md-4">
+      <div class="p-3 mb-5 mx-5 bg-body rounded">
+        <form class="row g-3" [formGroup]="addForm">
+          <!-- <div class="col-md-4">
   <label for="validationCustom01" class="form-label">First name</label>
   <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
   <div class="valid-feedback">
@@ -20,7 +20,9 @@
   is-invalid -->
 
           <div class="col-md-6">
-            <label for="inputEmail413" class="form-label is-invalid">First name</label>
+            <label for="inputEmail413" class="form-label is-invalid"
+              >First name</label
+            >
 
             <input
               formControlName="First_name"
@@ -30,17 +32,18 @@
               aria-label="First name"
               id="inputEmail413"
             />
-
-                <div class="invalid-feedback">
-                  Please provide a valid zip.
-                </div>
-
+            <ng-container *ngIf="addForm.controls['First_name'] as First_name">
+              <ng-container *ngIf="First_name.dirty || First_name.touched">
+                <ng-container *ngIf="First_name.errors as errors">
+                  <div *ngIf="errors['required']" class="invalid-feedback">
+                    Please Enter your frist name!
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
           </div>
-          <div
-            class="col-md-6"
-            >
-            <label
-            for="inputEmail412" class="form-label">Last name</label>
+          <div class="col-md-6">
+            <label for="inputEmail412" class="form-label">Last name</label>
 
             <input
               formControlName="Last_name"
@@ -50,6 +53,15 @@
               aria-label="Last name"
               id="inputEmail412"
             />
+            <ng-container *ngIf="addForm.controls['Last_name'] as Last_name">
+              <ng-container *ngIf="Last_name.dirty || Last_name.touched">
+                <ng-container *ngIf="Last_name.errors as errorsss">
+                  <div *ngIf="errorsss['required']" class="invalid-feedback">
+                    Please Enter your Last_name!
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
           </div>
 
           <div class="col-md-6">
@@ -57,9 +69,18 @@
             <input
               formControlName="Email"
               type="email"
-              class="form-control "
+              class="form-control"
               id="inputEmail4"
             />
+            <ng-container *ngIf="addForm.controls['Email'] as Email">
+              <ng-container *ngIf="Email.dirty || Email.touched">
+                <ng-container *ngIf="Email.errors as errorss">
+                  <div *ngIf="errorss['required']" class="invalid-feedback">
+                    Please Enter your Email!
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
           </div>
           <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Password</label>
@@ -69,6 +90,15 @@
               class="form-control"
               id="inputPassword4"
             />
+            <ng-container *ngIf="addForm.controls['Password'] as Password">
+              <ng-container *ngIf="Password.dirty || Password.touched">
+                <ng-container *ngIf="Password.errors as errorssss">
+                  <div *ngIf="errorssss['required']" class="invalid-feedback">
+                    Please Enter your Password!
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
           </div>
 
           <div class="col-12">
@@ -80,6 +110,15 @@
               id="inputAddress"
               placeholder="1234 Main street YK UK NEW YORK"
             />
+            <ng-container *ngIf="addForm.controls['Address'] as Address">
+              <ng-container *ngIf="Address.dirty || Address.touched">
+                <ng-container *ngIf="Address.errors as errorsssss">
+                  <div *ngIf="errorsssss['required']" class="invalid-feedback">
+                    Please Enter your Address!
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
           </div>
           <div class="col-12">
             <label for="inputAddress2" class="form-label">Address 2</label>
@@ -90,8 +129,17 @@
               id="inputAddress2"
               placeholder="Apartment, studio, or floor"
             />
+            <ng-container *ngIf="addForm.controls['Address_2'] as Address_2">
+              <ng-container *ngIf="Address_2.dirty || Address_2.touched">
+                <ng-container *ngIf="Address_2.errors as errorssssss">
+                  <div *ngIf="errorssssss['required']" class="invalid-feedback">
+                    Please Enter your Address 2!
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
           </div>
-          <div  class="col-md-6">
+          <div class="col-md-6">
             <label for="inputCity" class="form-label">City</label>
             <input
               formControlName="City"
@@ -108,6 +156,19 @@
               <option value="2">titwan</option>
               <option value="3">husima</option>
             </select>
+
+            <ng-container *ngIf="addForm.controls['State'] as State">
+              <ng-container *ngIf="State.dirty || State.touched">
+                <ng-container *ngIf="State.errors as errorsssssss">
+                  <div
+                    *ngIf="errorsssssss['required']"
+                    class="invalid-feedback"
+                  >
+                    Please Enter your State!
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
           </div>
           <div class="col-md-2">
             <label for="inputZip" class="form-label">Zip</label>
@@ -117,6 +178,18 @@
               class="form-control"
               id="inputZip"
             />
+            <ng-container *ngIf="addForm.controls['Zip'] as Zip">
+              <ng-container *ngIf="Zip.dirty || Zip.touched">
+                <ng-container *ngIf="Zip.errors as errorssssssss">
+                  <div
+                    *ngIf="errorssssssss['required']"
+                    class="invalid-feedback"
+                  >
+                    Please Enter your Zip!
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
           </div>
 
           <div class="col-12">
@@ -127,6 +200,22 @@
                 type="checkbox"
                 id="gridCheck"
               />
+              <ng-container
+                *ngIf="addForm.controls['Check_me_out'] as Check_me_out"
+              >
+                <ng-container
+                  *ngIf="Check_me_out.dirty || Check_me_out.touched"
+                >
+                  <ng-container *ngIf="Check_me_out.errors as errorsssssssss">
+                    <div
+                      *ngIf="errorsssssssss['required']"
+                      class="invalid-feedback"
+                    >
+                      Please Enter your Check me out!
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
               <label class="form-check-label" for="gridCheck">
                 Check me out
               </label>
@@ -135,11 +224,16 @@
 
           <div class="col-12">
             <button
-              [disabled]="!(addForm.value && (addForm.dirty || addForm.touched))"
-
-              [ngClass]="(addForm.value && (addForm.dirty || addForm.touched)) ? 'btn-primary' : 'btn-danger'"
+              [disabled]="
+                !(addForm.value && (addForm.dirty || addForm.touched))
+              "
+              [ngClass]="
+                addForm.value && (addForm.dirty || addForm.touched)
+                  ? 'btn-primary'
+                  : 'btn-danger'
+              "
               type="submit"
-              class="btn "
+              class="btn"
             >
               Sign in
             </button>
@@ -399,20 +493,17 @@
       <div class="alert alert-success" role="alert">the form is all valid</div>
       <div class="alert alert-warning" role="alert">look at the input(???)</div>
 
-
-    <div class="form-floating">
-      <textarea
-      class="form-control"
-      placeholder="Leave a comment here"
-      id="floatingTextarea2"
-      style="height: 300px"
+      <div class="form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Leave a comment here"
+          id="floatingTextarea2"
+          style="height: 300px"
         >
 
         {{ addForm.value | json }}
         </textarea>
-
-
+      </div>
     </div>
-</div>
   </div>
 </div>

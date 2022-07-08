@@ -45,25 +45,25 @@ export class ReactiveFormComponent implements OnInit {
   constructor(private fb: FormBuilder) {
     this.addForm = this.fb.group({
       First_name: ['',
-        [Validators.required, Validators.maxLength(10)], []],
+        [Validators.required, Validators.maxLength(10)]],
       Last_name: ['',
-        [Validators.required, Validators.maxLength(10)], []],
+        [Validators.required, Validators.maxLength(10)]],
       Email: ['',
-        [Validators.required, Validators.maxLength(10)], []],
+        [Validators.required, Validators.maxLength(10)]],
       Password: ['',
-        [Validators.required, Validators.maxLength(10)], []],
+        [Validators.required, Validators.maxLength(10)]],
       Address: ['',
-        [Validators.required, Validators.maxLength(10)], []],
+        [Validators.required, Validators.maxLength(10)]],
       Address_2: ['',
-        [Validators.required, Validators.maxLength(10)], []],
+        [Validators.required, Validators.maxLength(10)]],
       City: ['',
-        [Validators.required, Validators.maxLength(10)], []],
+        [Validators.required, Validators.maxLength(10)]],
       State: ['',
-        [Validators.required, Validators.maxLength(10)], []],
+        [Validators.required, Validators.maxLength(10)]],
       Zip: ['',
-        [Validators.required, Validators.maxLength(10)], []],
+        [Validators.required, Validators.maxLength(10)]],
       Check_me_out: ['',
-        [Validators.required, Validators.maxLength(10)], []],
+        [Validators.required, Validators.maxLength(10)]]
     });
     this.addForm.valueChanges.subscribe(console.log);
   }
