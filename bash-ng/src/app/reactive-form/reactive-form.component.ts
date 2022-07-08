@@ -40,35 +40,100 @@ export class ReactiveFormComponent implements OnInit {
   //   Last_name: new FormControl('', Validators.required, []),
   // });
 
-  public addForm: FormGroup;
+  public addForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    this.addForm = this.fb.group({
-      First_name: ['',
-        [Validators.required, Validators.maxLength(10)]],
-      Last_name: ['',
-        [Validators.required, Validators.maxLength(10)]],
-      Email: ['',
-        [Validators.required, Validators.maxLength(10)]],
-      Password: ['',
-        [Validators.required, Validators.maxLength(10)]],
-      Address: ['',
-        [Validators.required, Validators.maxLength(10)]],
-      Address_2: ['',
-        [Validators.required, Validators.maxLength(10)]],
-      City: ['',
-        [Validators.required, Validators.maxLength(10)]],
-      State: ['',
-        [Validators.required, Validators.maxLength(10)]],
-      Zip: ['',
-        [Validators.required, Validators.maxLength(10)]],
-      Check_me_out: ['',
-        [Validators.required, Validators.maxLength(10)]]
-    });
-    this.addForm.valueChanges.subscribe(console.log);
-  }
 
-  ngOnInit(): void {}
+
+  }
+  ngOnInit(): void {
+        this.addForm = this.fb.group({
+          First_name: [
+            '',
+            [
+              Validators.required,
+              Validators.maxLength(10),
+              Validators.minLength(2)
+            ],
+          ],
+          Last_name: [
+            '',
+            [
+              Validators.required,
+              Validators.maxLength(10),
+              Validators.minLength(2),
+            ],
+          ],
+          Email: [
+            '',
+            [
+              Validators.required,
+              Validators.maxLength(10),
+              Validators.minLength(2),
+            ],
+          ],
+          Password: [
+            '',
+            [
+              Validators.required,
+              Validators.maxLength(10),
+              Validators.minLength(2),
+            ],
+          ],
+          Address: [
+            '',
+            [
+              Validators.required,
+              Validators.maxLength(10),
+              Validators.minLength(2),
+            ],
+          ],
+          Address_2: [
+            '',
+            [
+              Validators.required,
+              Validators.maxLength(10),
+              Validators.minLength(2),
+            ],
+          ],
+          City: [
+            '',
+            [
+              Validators.required,
+              Validators.maxLength(10),
+              Validators.minLength(2),
+            ],
+          ],
+          State: [
+            '',
+            [
+              Validators.required,
+              Validators.maxLength(10),
+              Validators.minLength(2),
+            ],
+          ],
+          Zip: [
+            '',
+            [
+              Validators.required,
+              Validators.maxLength(10),
+              Validators.minLength(2),
+            ],
+          ],
+          Check_me_out: [
+            '',
+            [
+              Validators.required,
+              Validators.maxLength(10),
+              Validators.minLength(2),
+            ],
+          ],
+        });
+
+    this.addForm.valueChanges.subscribe(form => {
+      console.log(this.addForm)
+    });
+  }
 
   // get First_name() {
   //   return this.porfileForm.get('First_name');
