@@ -3,6 +3,7 @@ import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 import {
+  FormArray,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -28,6 +29,17 @@ export class ReactiveFormComponent implements OnInit {
   status8: boolean = false;
   status9: boolean = false;
 
+
+
+  'users  ': new FormArray([
+  this.fb.group(
+    {
+      'name': new FormControl(''),
+      'AGE': new FormControl(''),
+      'dept': new FormControl('')
+  }
+)
+  ]);
   // public from: FormGroup = new FormGroup({
   //   First_name: new FormControl(
   //     '',
